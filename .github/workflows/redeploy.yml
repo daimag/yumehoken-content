@@ -1,0 +1,16 @@
+name: redeploy site
+# 記事がpushされたら本体サイト(Vercel)を自動で再ビルド・再公開する
+on:
+  push:
+    branches: [main]
+jobs:
+  hook:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Vercel deploy hook
+        run: |
+          if [ -n "${{ secrets.VERCEL_DEPLOY_HOOK }}" ]; then
+            curl -fsS -X POST "${{ secrets.VERCEL_DEPLOY_HOOK }}" && echo "本体サイトの再デプロイを起動しました"
+          else
+            echo "VERCEL_DEPLOY_HOOK 未設定のためスキップ（Secretを設定すると有効化されます）"
+          fi
