@@ -2,7 +2,8 @@
 date: 2026-03-12
 title: 終活ステーションで相続のご相談をいただいたお客さまの声
 category: お知らせ
-externalLink: /shukatsu/voices
+thumbnail: /uploads/news-2026-shukatsu-voice.jpg
+externalLink: /shukatsu
 ---
 終活ステーションでは、終活や相続など、将来に向けた備えについてのご相談をお受けしています。
 
